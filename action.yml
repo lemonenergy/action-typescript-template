@@ -4,9 +4,9 @@ description: ""
 #     value:
 #         description: ""
 inputs:
-    github-token:
-        description: "GitHub Token to use for authentication (pushing to the repo)"
-        required: true
+  github-token:
+    description: "GitHub Token to use for authentication (pushing to the repo)"
+    required: true
 runs:
-    using: node20
-    main: dist/index.mjs
+  using: node20
+  main: dist/index.mjs

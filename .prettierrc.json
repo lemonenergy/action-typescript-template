@@ -1,15 +1,13 @@
 {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "overrides": [
-        {
-            "files": [
-                "*.yml"
-            ],
-            "options": {
-                "singleQuote": false
-            }
-        }
-    ]
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": ["*.yml"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }
