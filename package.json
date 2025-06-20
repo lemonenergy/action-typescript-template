@@ -21,7 +21,7 @@
     "lint": "eslint --cache --fix .",
     "all": "pnpm run lint && pnpm run format && pnpm run types",
     "release": "changelogen --release HEAD && git push --follow-tags",
-    "dist": "pnpm run build || true && git add . && git commit -m 'chore: update dist'",
+    "dist": "pnpm run build || true && git add . && git commit -m 'chore: update dist' && git push",
     "types": "tsc --skipLibCheck --noEmit"
   },
   "keywords": [
