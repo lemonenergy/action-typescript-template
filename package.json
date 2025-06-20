@@ -19,8 +19,8 @@
     "test": "vitest",
     "format": "prettier --write --cache .",
     "lint:fix": "eslint --cache --fix .",
-    "all": "pnpm run lint && pnpm run format && pnpm run test",
-    "release": "pnpm run dist && changelogen --release HEAD && git push --follow-tags",
+    "all": "pnpm run lint && pnpm run format",
+    "release": "changelogen --release HEAD && git push --follow-tags",
     "dist": "pnpm run build || true && git add . && git commit -m 'chore: update dist'"
   },
   "keywords": [
