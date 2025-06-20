@@ -5,25 +5,10 @@ inputs:
     description: "Node.js version to install"
     required: false
     default: "20"
-  ref:
-    description: "Git ref to checkout"
-    required: false
-    default: "main"
-  token:
-    description: "GitHub token for checkout"
-    required: false
-    default: ${{ github.token }}
 
 runs:
   using: "composite"
   steps:
-    - name: 📥 Checkout
-      uses: actions/checkout@v4
-      with:
-        token: ${{ inputs.token }}
-        fetch-depth: 0
-        ref: ${{ inputs.ref }}
-
     - name: 📦 Install pnpm
       uses: pnpm/action-setup@v4
       with:
