@@ -39,6 +39,7 @@ jobs:
         run: |
           if [[ -n $(git diff --exit-code) ]]; then
             echo "Built files are not up to date"
+            echo $(git diff --exit-code)
             exit 1
           fi
 
