@@ -28,7 +28,7 @@ const run = async () => {
       `https://x-access-token:${githubToken}@github.com/${context.repo.owner}/${context.repo.repo}.git`
     ])
 
-    info('Release git config completed...')
+    info('Git config completed...')
 
     info('TODO: Implement the release logic here...')
   } catch (error) {

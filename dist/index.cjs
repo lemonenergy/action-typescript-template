@@ -31292,7 +31292,7 @@ const run = async () => {
       "origin",
       `https://x-access-token:${githubToken}@github.com/${githubExports.context.repo.owner}/${githubExports.context.repo.repo}.git`
     ]);
-    coreExports.info("Release git config completed...");
+    coreExports.info("Git config completed...");
     coreExports.info("TODO: Implement the release logic here...");
   } catch (error) {
     coreExports.setFailed(
