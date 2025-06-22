@@ -2,11 +2,13 @@ name: Test and dist
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, unlocked]
     branches:
       - main
 
 permissions:
   contents: write # This is required to create a release
+  pull-requests: write # This is required to update the PR with the distribution changes
 
 concurrency:
   group: "test-and-dist"
@@ -51,3 +53,8 @@ jobs:
       - name: Build the distribution
         continue-on-error: true
         run: pnpm run dist
+
+      - name: Push changes
+        # Ensures it only pushes if the PR is from the same repository
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        run: git push origin HEAD:${GITHUB_REF_NAME}
