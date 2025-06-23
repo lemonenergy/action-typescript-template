@@ -30,6 +30,13 @@ Typescript action template with basic setup for GitHub Actions + release.
 - tests are run using [vitest](https://vitest.dev/). You can add your tests in `src/__tests__/`. The test command is `pnpm test`.
 - remember to update the readme as well, so users know how to use your action.
 
+> [!WARNING]
+> It might be necessary to make the repository public to use it in GitHub Actions, as private repositories need special permissions that we do not have for now.
+
+## Releases
+
+Releases are automatically created when a push is made to `main` (recommended to be made through pull requests). The release will be tagged and a changelog will be generated based on the commit messages.
+
 ## Tooling
 
 A few packages are included by default to help with development:
